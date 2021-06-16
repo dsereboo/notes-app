@@ -4,6 +4,7 @@ import './App.css';
 import {Container,Row, Col,Modal} from "react-bootstrap"
 import FloatButton from './components/FloatButton';
 import AddNotes from './components/AddNotes';
+import Notes from "./components/Notes";
 
 function App() {
   //State and methods to hide/show modal
@@ -25,7 +26,9 @@ function App() {
         <h1 className="text-center">Notes</h1>
       </Row>
       <Row>
-        <Col></Col>
+        <Col>
+          <Notes/>
+        </Col>
       </Row>
       <FloatButton handleShow={handleShow} />
     </Container>

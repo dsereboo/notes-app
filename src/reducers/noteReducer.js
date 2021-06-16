@@ -1,5 +1,5 @@
 const initialState={notes:[
-    {id:"",title:"", body:"", date:""}
+    {id:"bsjshj",title:"Sample1 ", body:"Always try new", date:"yy/dd/mm"}
 ]}
 
 const noteReducer=(state=initialState,action)=>{
