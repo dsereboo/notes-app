@@ -1,12 +1,13 @@
 import React from "react"
 import {Button} from "react-bootstrap"
 
-const FloatButton=()=>{
+const FloatButton=(props)=>{
     return(
         <Button
             variant="primary custom"
             size="lg"
             className="btn-float"
+            onClick={props.handleShow}
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"

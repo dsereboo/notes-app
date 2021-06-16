@@ -1,10 +1,10 @@
 import React,{useState} from "react"
 import {Form} from "react-bootstrap"
 
-const AddNotes=()=>{
+const AddNotes=(props)=>{
     const [date,setDate]=useState("")
     const [note, setNote]=useState({
-        date:"", title:"", body:"",
+        id:"", date:"", title:"", body:"",
     })
 
     const findDate=()=>{
@@ -16,10 +16,13 @@ const AddNotes=()=>{
 
     const handleChange=(event)=>{
         setNote({...note, [event.target.name]:event.target.value})
-        console.log(note)
     }
 
-    const handleSubmit=()=>{}
+    const handleSubmit=(event)=>{
+        event.preventDefault()
+        note.id=Math.random().toString(36).slice(2)
+        props.handleClose()
+    }
 
     return(
        <Form onSubmit={handleSubmit}>
