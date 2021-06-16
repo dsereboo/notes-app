@@ -4,3 +4,10 @@ export function addNote(newNote){
         payload:newNote,
     }
 }
+
+export function deleteNote(noteID){
+    return{
+        type:"DELETE_NOTE",
+        payload:noteID,
+    }
+}
