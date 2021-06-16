@@ -39,7 +39,7 @@ const AddNotes=(props)=>{
            </Form.Group>
            <Form.Group>
                <Form.Label>Notes</Form.Label>
-               <Form.Control type="text" name="" placeholder="" onChange={handleChange}/>
+               <Form.Control type="text" name="body" placeholder="Note" as="textarea" rows="7" onChange={handleChange}/>
            </Form.Group>
            <Button size="md" variant="primary" type="submit" block>Create</Button>
        </Form>
