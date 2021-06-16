@@ -15,7 +15,7 @@ function App() {
     <Container>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Edit Contact</Modal.Title>
+          <Modal.Title className="text-center">Edit Contact</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <AddNotes handleClose={handleClose} />

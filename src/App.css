@@ -27,3 +27,8 @@ body{
 .bi.bi-plus.custom{
   padding-right: 0.55rem;
 }
+
+
+.modal-body{
+  padding: 2rem 2rem 3rem;
+}

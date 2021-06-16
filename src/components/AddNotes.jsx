@@ -1,5 +1,5 @@
-import React,{useState} from "react"
-import {Form} from "react-bootstrap"
+import React,{useState,useEffect} from "react"
+import {Form,Button} from "react-bootstrap"
 
 const AddNotes=(props)=>{
     const [date,setDate]=useState("")
@@ -7,12 +7,15 @@ const AddNotes=(props)=>{
         id:"", date:"", title:"", body:"",
     })
 
-    const findDate=()=>{
-        const timeElapsed = Date.now();
-        const today = new Date(timeElapsed);
-        const finalDate=today.toDateString();
-        setDate(finalDate)
-    }
+
+    useEffect(
+        ()=>{
+            const timeElapsed = Date.now();
+            const today = new Date(timeElapsed);
+            const finalDate = today.toUTCString();
+            setDate(finalDate);
+        },[]
+    )
 
     const handleChange=(event)=>{
         setNote({...note, [event.target.name]:event.target.value})
@@ -27,7 +30,7 @@ const AddNotes=(props)=>{
     return(
        <Form onSubmit={handleSubmit}>
             <Form.Group>
-               <Form.Label></Form.Label>
+               <Form.Label>Date</Form.Label>
                <Form.Control type="text" name="date" value={date} readOnly/>
            </Form.Group>
            <Form.Group>
@@ -38,6 +41,7 @@ const AddNotes=(props)=>{
                <Form.Label>Notes</Form.Label>
                <Form.Control type="text" name="" placeholder="" onChange={handleChange}/>
            </Form.Group>
+           <Button size="md" variant="primary" type="submit" block>Create</Button>
        </Form>
     )
 }
