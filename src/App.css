@@ -7,6 +7,11 @@ body{
   margin-bottom: 2rem;
 }
 
+.custom{
+  background-color:rgb(75,0,130);
+}
+
+
 
 .btn-float.btn.btn-primary.custom.btn-lg{
   background-color:rgb(75,0,130);
