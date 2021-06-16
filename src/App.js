@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {Container,Row, Col} from "react-bootstrap"
 import FloatButton from './components/FloatButton';
+import AddNotes from './components/AddNotes';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       </Row>
       <Row>
         <Col>
-          <p>Notes come here</p>
+         <AddNotes/>
         </Col>
       </Row>
       <FloatButton/>

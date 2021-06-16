@@ -4,7 +4,7 @@ import {Button} from "react-bootstrap"
 const FloatButton=()=>{
     return(
         <Button
-            variant="primary"
+            variant="primary custom"
             size="lg"
             className="btn-float"
         >
