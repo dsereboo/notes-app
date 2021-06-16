@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from "react"
 import {Form,Button} from "react-bootstrap"
+import { addNote } from "../actions/noteActions"
+import {connect} from "react-redux"
 
 const AddNotes=(props)=>{
     const [date,setDate]=useState("")
@@ -23,8 +25,10 @@ const AddNotes=(props)=>{
 
     const handleSubmit=(event)=>{
         event.preventDefault()
+        note.date=date
         note.id=Math.random().toString(36).slice(2)
         props.handleClose()
+        props.addNewNote(note)
     }
 
     return(
@@ -45,4 +49,6 @@ const AddNotes=(props)=>{
        </Form>
     )
 }
-export default AddNotes
+
+const mapDispatchToProps={addNewNote:addNote}
+export default connect(null, mapDispatchToProps)(AddNotes)
