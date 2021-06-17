@@ -11,3 +11,10 @@ export function deleteNote(noteID){
         payload:noteID,
     }
 }
+
+export function editNote(updatedNote){
+    return{
+        type:"EDIT_NOTE",
+        payload:updatedNote,
+    }
+}
